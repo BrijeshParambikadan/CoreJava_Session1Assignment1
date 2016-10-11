@@ -14,13 +14,34 @@ public class J_S1A1 {
 		System.out.print("Enter value for b :");
 		int b=bb.nextInt();
 		
-		while(b-->0){
-			a++;
-		}
 		
+		int diff=0;
+		int small=0;
+		int big=0;
+		
+		if (a>b){
+				big=a;
+				small=b;
+				diff=a-b;
+				}
+		else {
+			big=b;
+			small=a;
+			diff=b-a;
+			}
+		
+		if (diff<big){
+			while(small-->0){
+			big++;
+				}	
+		}
+	else 	{
+			while(small++<0){
+			big--;
+			}}
 		// close scanner
 		bb.close();
-		System.out.print("Sum of a & b is "+a);
+		System.out.print("Sum of a & b is "+big);
 	}
 
 }
